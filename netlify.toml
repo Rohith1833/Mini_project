@@ -2,7 +2,7 @@
 # site is published as static files. Only the files the app needs are copied
 # into dist/ to keep the local virtualenv and tests out of the deploy.
 [build]
-  command = "rm -rf dist && mkdir -p dist/data && cp web/index.html app.py analyzer.py dist/ && cp data/*.csv dist/data/ && cp .streamlit/config.toml dist/streamlit-config.toml"
+  command = "rm -rf dist && mkdir -p dist/data && cp index.html app.py analyzer.py dist/ && cp data/*.csv dist/data/"
   publish = "dist"
 
 [build.environment]

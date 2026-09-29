@@ -83,7 +83,7 @@ Tests cover conflicting clauses, negation, word boundaries, absent aspects, per-
 ## GitHub / hosting
 Source is ready to add to a GitHub repository. Do not include `.venv` or your own private review datasets. For Streamlit hosting, use `app.py` as the entry point and Python 3.12. This package itself does not create a repository or deploy a hosted app.
 
-**Netlify:** `netlify.toml` publishes a static build (`web/index.html` + `app.py`, `analyzer.py`, `data/`) that runs the same Streamlit app in the visitor's browser using [stlite](https://github.com/whitphx/stlite) (Pyodide). No Python server is needed; reviews are processed locally in the browser. The "Local CSV path" option only sees the browser's in-memory filesystem there, so use upload instead.
+**Netlify:** `netlify.toml` publishes a static build (`index.html` + `app.py`, `analyzer.py`, `data/`) that runs the same Streamlit app in the visitor's browser using [stlite](https://github.com/whitphx/stlite) (Pyodide). No Python server is needed; reviews are processed locally in the browser. The "Local CSV path" option only sees the browser's in-memory filesystem there, so use upload instead.
 
 ## Data and references
 Public Yelp sentences: Kotzias, D. (2015). Sentiment Labelled Sentences [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C57604. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Original TSV converted to CSV, preserving text and labels. See `data/DATA_SOURCES.md`.
