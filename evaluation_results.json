@@ -1,0 +1,18 @@
+{
+  "dataset": "UCI Yelp subset; 1000 labelled sentences",
+  "rows": 1000,
+  "method": "VADER plus documented restaurant lexicon; no training or tuning on these labels",
+  "protocol": "Forced binary whole-sentence compound >= 0 is positive; otherwise negative. Differs from UI neutral/mixed handling.",
+  "accuracy": 0.745,
+  "positive_precision": 0.669432918395574,
+  "positive_recall": 0.968,
+  "positive_f1": 0.7914963205233033,
+  "confusion_matrix": {
+    "true_negative": 261,
+    "false_positive": 239,
+    "false_negative": 16,
+    "true_positive": 484
+  },
+  "neutral_band_sentences": 226,
+  "limitations": "One public dataset, no aspect labels. Not an estimate of aspect detection accuracy, UI four-class accuracy, or performance on unseen local businesses."
+}
