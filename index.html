@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>LocalLens • Review intelligence</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.9.2/build/stlite.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.9.2/build/stlite.js";
+      mount(
+        {
+          requirements: ["pandas", "altair", "vaderSentiment", "sqlite3"],
+          entrypoint: "app.py",
+          files: {
+            "app.py": { url: "./app.py" },
+            "analyzer.py": { url: "./analyzer.py" },
+            "data/demo_reviews.csv": { url: "./data/demo_reviews.csv" },
+            "data/uci_yelp_reviews.csv": { url: "./data/uci_yelp_reviews.csv" },
+            ".streamlit/config.toml": "[theme]\nbase = \"light\"\nprimaryColor = \"#12866f\"\nbackgroundColor = \"#f7f8fc\"\nsecondaryBackgroundColor = \"#ffffff\"\ntextColor = \"#182438\"\nfont = \"sans serif\"\n\n[browser]\ngatherUsageStats = false\n",
+          },
+        },
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>
