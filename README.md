@@ -17,9 +17,11 @@ python -m venv .venv
 ```
 Windows:
 ```bat
+py -3.12 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
+The pinned pandas version requires a compatible prebuilt wheel; use Python 3.12 for this project. If `.venv` was created with another Python version, create a new 3.12 environment instead of trying to build pandas from source. The Windows launcher checks for Python 3.12 and will use `.venv312` if an incompatible `.venv` already exists.
 macOS/Linux:
 ```bash
 bash start_mac_linux.sh
